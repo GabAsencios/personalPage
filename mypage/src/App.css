@@ -74,21 +74,7 @@
   border-radius: 150px;
 }
 
-/* 1. Parent: The scroll container */
-.page-wrapper {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory; /* Forces snapping on the Y axis */
-  scroll-behavior: smooth;
-}
 
-/* 2. Children: Each 'slide' */
-.section {
-  height: 100vh; /* Must be full height for the slide feel */
-  width: 100%;
-  scroll-snap-align: start; /* Where to snap (the top of the section) */
-  scroll-snap-stop: always;  /* Optional: prevents skipping slides on fast flick */
-}
 
 /* The Scroll Parent */
 .snap-container {
@@ -103,7 +89,27 @@
 }
 
 /* Individual Slides */
-.snap-section {
+.main-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+
+  /* Centering Logic */
+  display: flex;
+  flex-direction: column; /* Stack image, name, and bio vertically */
+  justify-content: center; /* Vertical center */
+  align-items: center;     /* Horizontal center */
+  text-align: center;      /* Ensures text lines are centered */
+}
+.about-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+}
+.projects-section {
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;

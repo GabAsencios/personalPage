@@ -6,34 +6,39 @@ import React from "react";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { Github, Linkedin, FileText, Mail } from "lucide-react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function App() {
   return (
     <main className="snap-container">
+      <AnimatedThemeToggler className="fixed top-4 right-4 z-50" />
+      <DockDemo />
       {/* SECTION 1: HERO */}
-      <section className="snap-section">
-        <DockDemo />
+      <section className="main-section">
+        <img className="selfie-pic" src="/Page_pic.JPEG" alt="selfie" />
+        <span className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
+          GENIUS BADDIE
+        </span>
+        {buttonPages()}
+      </section>
+      {/* SECTION 2: ABOUT*/}
+      <section className="about-section">
+        <h2 className="text-white text-4xl">Bio</h2>
       </section>
 
-      {/* SECTION 2: PROJECTS (Example) */}
-      <section className="snap-section">
+      {/* SECTION 3: PROJECTS */}
+      <section className="projects-section">
         <h2 className="text-white text-4xl">Projects</h2>
       </section>
     </main>
   );
 }
 
-export function DockDemo() {
+function DockDemo() {
   return (
     <div className="hero-container">
-      <img className="selfie-pic" src="/Page_pic.JPEG" alt="selfie" />
-      <span className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-        Gabriel Asencios
-      </span>
-      <span className="bio-text">BLAH BLAH BLAH</span>
-
       <div className="dashboard-container">
         <Dock direction="middle">
           <DockIcon>
@@ -54,11 +59,15 @@ export function DockDemo() {
   );
 }
 
-export function ThemeToggler() {
+function buttonPages() {
   return (
-    <DockIcon className="fixed top-4 right-4 z-50">
-      <AnimatedThemeToggler />
-    </DockIcon>
+    <div className="flex flex-row gap-4">
+      <span>
+        <InteractiveHoverButton> About </InteractiveHoverButton>
+        <InteractiveHoverButton> Projects </InteractiveHoverButton>
+        <InteractiveHoverButton> Skills </InteractiveHoverButton>
+      </span>
+    </div>
   );
 }
 
