@@ -3,10 +3,28 @@
 import "./App.css";
 import React from "react";
 
-import { Dock, DockIcon } from "@/components/magicui/dock";
-import { Github, Linkedin, FileText, Mail } from "lucide-react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import { Dock, DockIcon } from "@/components/magicui/dock";
+import { MagicCard } from "@/components/ui/magic-card.tsx";
+
+import { Github, Linkedin, FileText, Mail } from "lucide-react";
+import { FaJava, FaDatabase } from "react-icons/fa";
+import {
+  SiReact,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiNodedotjs,
+  SiPython,
+  SiCplusplus,
+  SiPytorch,
+  SiScikitlearn,
+  SiMysql,
+  SiJupyter,
+  SiGooglecolab,
+  SiWireshark,
+} from "react-icons/si";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -15,8 +33,9 @@ export function App() {
     <main className="snap-container">
       <AnimatedThemeToggler className="fixed top-4 right-4 z-50" />
       <DockDemo />
+      {mainPageButton()}
       {/* SECTION 1: HERO */}
-      <section className="main-section">
+      <section id="main-section" className="main-section">
         <img className="selfie-pic" src="/Page_pic.JPEG" alt="selfie" />
         <span className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
           GENIUS BADDIE
@@ -24,13 +43,36 @@ export function App() {
         {buttonPages()}
       </section>
       {/* SECTION 2: ABOUT*/}
-      <section className="about-section">
-        <h2 className="text-white text-4xl">Bio</h2>
+      <section id="about-section" className="about-section">
+        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
+          Bio
+        </h2>
       </section>
-
       {/* SECTION 3: PROJECTS */}
-      <section className="projects-section">
-        <h2 className="text-white text-4xl">Projects</h2>
+      <section id="projects-section" className="projects-section">
+        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
+          Projects
+        </h2>
+      </section>
+      {/* SECTION 4: SKILLS */}
+      <section
+        id="skills-section"
+        className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8"
+      >
+        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
+          Skills
+        </h2>
+        <SkillsGrid />
+      </section>
+      {/* SECTION 5: CONTACT */}
+      <section
+        id="contact-section"
+        className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8"
+      >
+        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
+          Contact
+        </h2>
+        {contactCard()}
       </section>
     </main>
   );
@@ -59,14 +101,155 @@ function DockDemo() {
   );
 }
 
+//Buttons to scroll to sections
+const scrollToSection = (className: string) => {
+  const element = document.getElementById(className);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 function buttonPages() {
   return (
     <div className="flex flex-row gap-4">
-      <span>
-        <InteractiveHoverButton> About </InteractiveHoverButton>
-        <InteractiveHoverButton> Projects </InteractiveHoverButton>
-        <InteractiveHoverButton> Skills </InteractiveHoverButton>
-      </span>
+      <div>
+        <InteractiveHoverButton
+          onClick={() => scrollToSection("about-section")}
+        >
+          {" "}
+          About{" "}
+        </InteractiveHoverButton>
+        <InteractiveHoverButton
+          onClick={() => scrollToSection("projects-section")}
+        >
+          {" "}
+          Projects{" "}
+        </InteractiveHoverButton>
+        <InteractiveHoverButton
+          onClick={() => scrollToSection("skills-section")}
+        >
+          {" "}
+          Skills{" "}
+        </InteractiveHoverButton>
+        <InteractiveHoverButton
+          onClick={() => scrollToSection("contact-section")}
+        >
+          {" "}
+          Contact{" "}
+        </InteractiveHoverButton>
+      </div>
+    </div>
+  );
+}
+
+function mainPageButton() {
+  return (
+    <div className="home-button-container">
+      <InteractiveHoverButton onClick={() => scrollToSection("main-section")}>
+        {" "}
+        Home{" "}
+      </InteractiveHoverButton>
+    </div>
+  );
+}
+
+// Skills Grid Component
+function SkillsGrid() {
+  const skills = [
+    { id: 0, icon: FaJava, name: "80%" },
+    { id: 1, icon: SiPython, name: "Python" },
+    { id: 2, icon: SiJavascript, name: "JavaScript" },
+    { id: 3, icon: SiHtml5, name: "HTML" },
+    { id: 4, icon: SiCss3, name: "CSS" },
+    { id: 5, icon: SiCplusplus, name: "C++" },
+    { id: 6, icon: SiReact, name: "React" },
+    { id: 7, icon: FaDatabase, name: "SQL" },
+    { id: 8, icon: SiNodedotjs, name: "NodeJS" },
+    { id: 9, icon: SiPytorch, name: "PyTorch" },
+    { id: 10, icon: SiScikitlearn, name: "Scikit-learn" },
+    { id: 11, icon: SiMysql, name: "MySQL" },
+    { id: 12, icon: SiJupyter, name: "Jupyter Notebook" },
+    { id: 13, icon: SiGooglecolab, name: "Google Colab" },
+    { id: 14, icon: SiWireshark, name: "WireShark" },
+  ];
+
+  return (
+    <div className="skills-grid">
+      {skills.map((skill) => (
+        <div key={skill.id} className="skill-item">
+          <skill.icon className="skill-icon" />
+          <span className="skill-name">{skill.name}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function contactCard() {
+  return (
+    <div className="w-full max-w-md p-4">
+      <MagicCard
+        className="flex flex-col items-center justify-center p-6 shadow-2xl"
+        gradientColor="#D9D9D955"
+      >
+        <div className="w-full space-y-4">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-black dark:text-white">
+              Get in Touch
+            </h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Send me a message and I'll get back to you.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-black dark:text-white">
+              Name
+            </label>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-black dark:text-white">
+              Email
+            </label>
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-black dark:text-white">
+              Subject
+            </label>
+            <input
+              type="text"
+              placeholder="Subject"
+              className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-black dark:text-white">
+              Message
+            </label>
+            <textarea
+              rows={4}
+              placeholder="Your message..."
+              className="w-full resize-none rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+            />
+          </div>
+
+          <div className="flex justify-center pt-2">
+            <InteractiveHoverButton>Send Message</InteractiveHoverButton>
+          </div>
+        </div>
+      </MagicCard>
     </div>
   );
 }

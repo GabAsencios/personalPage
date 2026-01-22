@@ -61,6 +61,14 @@
   box-sizing: border-box;
 }
 
+.home-button-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
 .bio-text {
   color: #888;
   margin-top: 1rem;
@@ -81,7 +89,6 @@
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
 
 .snap-container::-webkit-scrollbar {
@@ -106,13 +113,77 @@
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   position: relative;
 }
 .projects-section {
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  position: relative;
+}
+
+.skills-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.skill-item {
+  position: relative;
+  display: flex;
+  height: 7rem;
+  width: 7rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  transition: all 300ms;
+  
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.skill-icon {
+  height: 4rem;
+  width: 4rem;
+  color: #444;
+  transition: opacity 300ms;
+}
+
+.skill-item:hover .skill-icon {
+  opacity: 0;
+}
+
+.skill-name {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #888;
+  opacity: 0;
+  transition: opacity 300ms;
+  text-align: center;
+}
+
+.skill-item:hover .skill-name {
+  opacity: 1;
+}
+
+.contact-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
   position: relative;
 }
