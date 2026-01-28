@@ -8,7 +8,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { MagicCard } from "@/components/ui/magic-card.tsx";
 
-import { Github, Linkedin, FileText, Mail } from "lucide-react";
+import { Linkedin, FileText, Mail } from "lucide-react";
 import { FaJava, FaDatabase } from "react-icons/fa";
 import {
   SiReact,
@@ -26,10 +26,11 @@ import {
   SiWireshark,
 } from "react-icons/si";
 
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardAction,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -55,14 +56,18 @@ export function App() {
       {/* SECTION 2: ABOUT*/}
       <section id="about-section" className="about-section">
         <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-          Bio
+          About
         </h2>
+        <CardBio/>
       </section>
       {/* SECTION 3: PROJECTS */}
       <section id="projects-section" className="projects-section">
         <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
           Projects
         </h2>
+        <div className="card-container">
+          <CardProject />
+        </div>
 
       </section>
       {/* SECTION 4: SKILLS */}
@@ -275,3 +280,110 @@ const Icons = {
     </svg>
   ),
 };
+
+function CardProject() {
+  return (
+    <>
+    <Card className="relative mx-auto w-full max-w-sm pt-0">
+      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+      <img
+        src="https://avatar.vercel.sh/shadcn1"
+        alt="Event cover"
+        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+      />
+      <CardHeader>
+        <CardAction>
+          <Badge variant="secondary">Featured</Badge>
+        </CardAction>
+        <CardTitle>Design systems meetup</CardTitle>
+        <CardDescription>
+          A practical talk on component APIs, accessibility, and shipping
+          faster.
+        </CardDescription>
+      </CardHeader>
+      <CardFooter>
+        <Button className="w-full">View Event</Button>
+      </CardFooter>
+    </Card>
+
+    <Card className="relative mx-auto w-full max-w-sm pt-0">
+      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+      <img
+        src="https://avatar.vercel.sh/shadcn1"
+        alt="Event cover"
+        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+      />
+      <CardHeader>
+        <CardAction>
+          <Badge variant="secondary">Featured</Badge>
+        </CardAction>
+        <CardTitle>Design systems meetup</CardTitle>
+        <CardDescription>
+          A practical talk on component APIs, accessibility, and shipping
+          faster.
+        </CardDescription>
+      </CardHeader>
+      <CardFooter>
+        <Button className="w-full">View Event</Button>
+      </CardFooter>
+    </Card>
+
+    <Card className="relative mx-auto w-full max-w-sm pt-0">
+      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+      <img
+        src="https://avatar.vercel.sh/shadcn1"
+        alt="Event cover"
+        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+      />
+      <CardHeader>
+        <CardAction>
+          <Badge variant="secondary">Featured</Badge>
+        </CardAction>
+        <CardTitle>Design systems meetup</CardTitle>
+        <CardDescription>
+          A practical talk on component APIs, accessibility, and shipping
+          faster.
+        </CardDescription>
+      </CardHeader>
+      <CardFooter>
+        <Button className="w-full">View Event</Button>
+      </CardFooter>
+    </Card>
+    </>
+  )
+}
+
+export function CardBio() {
+  return (
+    <Card className="w-full max-w-4xl mx-auto overflow-hidden">
+      <div className="flex flex-col md:flex-row">
+        <div className="flex-1 p-6 flex flex-col justify-center">
+          <CardHeader className="p-0 mb-4">
+            <CardTitle className="text-2xl font-bold">[Your Name]</CardTitle>
+            <CardDescription className="text-lg">
+              [Your Title]
+            </CardDescription>
+          </CardHeader>
+          <div className="text-muted-foreground space-y-4">
+            <p>
+              [Your bio description goes here. This is a great place to introduce yourself and talk about your background.]
+            </p>
+            <p>
+              [You can add more details about your experience, passions, and what you are looking for.]
+            </p>
+          </div>
+          <CardFooter className="p-0 mt-6">
+            <Button>[Contact]</Button>
+          </CardFooter>
+        </div>
+        <div className="w-full md:w-2/5 relative min-h-[300px]">
+          <img
+            src="https://avatar.vercel.sh/shadcn1"
+            alt="Profile"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </Card>
+  )
+}
