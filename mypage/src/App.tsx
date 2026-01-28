@@ -26,6 +26,16 @@ import {
   SiWireshark,
 } from "react-icons/si";
 
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function App() {
