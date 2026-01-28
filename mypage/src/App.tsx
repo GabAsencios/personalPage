@@ -53,6 +53,7 @@ export function App() {
         <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
           Projects
         </h2>
+
       </section>
       {/* SECTION 4: SKILLS */}
       <section
