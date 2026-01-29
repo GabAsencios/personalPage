@@ -47,9 +47,9 @@ export function App() {
       {mainPageButton()}
       {/* SECTION 1: HERO */}
       <section id="main-section" className="main-section">
-        <img className="selfie-pic" src="/Page_pic.JPEG" alt="selfie" />
+        {/* <img className="selfie-pic" src="/" alt="selfie" /> */}
         <span className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-          GENIUS BADDIE
+          Gabriel Asencios
         </span>
         {buttonPages()}
       </section>
@@ -171,21 +171,21 @@ function mainPageButton() {
 // Skills Grid Component
 function SkillsGrid() {
   const skills = [
-    { id: 0, icon: FaJava, name: "80%" },
-    { id: 1, icon: SiPython, name: "Python" },
-    { id: 2, icon: SiJavascript, name: "JavaScript" },
-    { id: 3, icon: SiHtml5, name: "HTML" },
-    { id: 4, icon: SiCss3, name: "CSS" },
-    { id: 5, icon: SiCplusplus, name: "C++" },
-    { id: 6, icon: SiReact, name: "React" },
-    { id: 7, icon: FaDatabase, name: "SQL" },
-    { id: 8, icon: SiNodedotjs, name: "NodeJS" },
-    { id: 9, icon: SiPytorch, name: "PyTorch" },
-    { id: 10, icon: SiScikitlearn, name: "Scikit-learn" },
-    { id: 11, icon: SiMysql, name: "MySQL" },
-    { id: 12, icon: SiJupyter, name: "Jupyter Notebook" },
-    { id: 13, icon: SiGooglecolab, name: "Google Colab" },
-    { id: 14, icon: SiWireshark, name: "WireShark" },
+    { id: 0, icon: FaJava, name: "90%" },
+    { id: 1, icon: SiPython, name: "85%" },
+    { id: 2, icon: SiJavascript, name: "75%" },
+    { id: 3, icon: SiHtml5, name: "85%" },
+    { id: 4, icon: SiCss3, name: "80%" },
+    { id: 5, icon: SiCplusplus, name: "75%" },
+    { id: 6, icon: SiReact, name: "70%" },
+    // { id: 7, icon: FaDatabase, name: "80%" },
+    { id: 8, icon: SiNodedotjs, name: "70%" },
+    { id: 9, icon: SiPytorch, name: "90%" },
+    { id: 10, icon: SiScikitlearn, name: "90%" },
+    { id: 11, icon: SiMysql, name: "80%" },
+    { id: 12, icon: SiJupyter, name: "80%" },
+    { id: 13, icon: SiGooglecolab, name: "80%" },
+    { id: 14, icon: SiWireshark, name: "75%" },
   ];
 
   return (
@@ -327,33 +327,11 @@ function CardProject() {
         <Button className="w-full">View Event</Button>
       </CardFooter>
     </Card>
-
-    <Card className="relative mx-auto w-full max-w-sm pt-0">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-      <img
-        src="https://avatar.vercel.sh/shadcn1"
-        alt="Event cover"
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-      />
-      <CardHeader>
-        <CardAction>
-          <Badge variant="secondary">Featured</Badge>
-        </CardAction>
-        <CardTitle>Design systems meetup</CardTitle>
-        <CardDescription>
-          A practical talk on component APIs, accessibility, and shipping
-          faster.
-        </CardDescription>
-      </CardHeader>
-      <CardFooter>
-        <Button className="w-full">View Event</Button>
-      </CardFooter>
-    </Card>
     </>
   )
 }
 
-export function CardBio() {
+function CardBio() {
   return (
     <Card className="w-full max-w-4xl mx-auto overflow-hidden">
       <div className="flex flex-col md:flex-row">
