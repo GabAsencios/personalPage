@@ -24,6 +24,8 @@ import {
   SiJupyter,
   SiGooglecolab,
   SiWireshark,
+  SiMongodb,
+  SiTypescript,
 } from "react-icons/si";
 
 import { Badge } from "@/components/ui/badge"
@@ -69,7 +71,7 @@ export function App() {
           Projects
         </h2>
         <div className="card-container">
-          <CardProject />
+          <CardProject/>
         </div>
 
       </section>
@@ -174,21 +176,23 @@ function mainPageButton() {
 // Skills Grid Component
 function SkillsGrid() {
   const skills = [
-    { id: 0, icon: FaJava, name: "90%" },
-    { id: 1, icon: SiPython, name: "85%" },
-    { id: 2, icon: SiJavascript, name: "75%" },
-    { id: 3, icon: SiHtml5, name: "85%" },
-    { id: 4, icon: SiCss3, name: "80%" },
-    { id: 5, icon: SiCplusplus, name: "75%" },
-    { id: 6, icon: SiReact, name: "70%" },
-    // { id: 7, icon: FaDatabase, name: "80%" },
-    { id: 8, icon: SiNodedotjs, name: "70%" },
-    { id: 9, icon: SiPytorch, name: "90%" },
-    { id: 10, icon: SiScikitlearn, name: "90%" },
-    { id: 11, icon: SiMysql, name: "80%" },
-    { id: 12, icon: SiJupyter, name: "80%" },
-    { id: 13, icon: SiGooglecolab, name: "80%" },
-    { id: 14, icon: SiWireshark, name: "75%" },
+    { id: 0, icon: FaJava, name: "Java 90%" },
+    { id: 1, icon: SiPython, name: "Python 85%" },
+    { id: 2, icon: SiJavascript, name: "JavaScript 75%" },
+    { id: 3, icon: SiHtml5, name: "HTML 85%" },
+    { id: 4, icon: SiCss3, name: "CSS 80%" },
+    { id: 5, icon: SiCplusplus, name: "C++ 75%" },
+    { id: 6, icon: SiReact, name: "React 70%" },
+    { id: 7, icon: SiMongodb, name: "MongoDB 80%" },
+    { id: 8, icon: SiNodedotjs, name: "Node.js 70%" },
+    { id: 9, icon: SiPytorch, name: "PyTorch 90%" },
+    { id: 10, icon: SiScikitlearn, name: "Scikit-learn 90%" },
+    { id: 11, icon: SiMysql, name: "MySQL 80%" },
+    { id: 12, icon: SiJupyter, name: "Jupyter 80%" },
+    { id: 13, icon: SiGooglecolab, name: "Google Colab 80%" },
+    { id: 14, icon: SiWireshark, name: "Wireshark 75%" },
+    { id: 15, icon: SiTypescript, name: "TypeScript 70%" },
+    
   ];
 
   return (
@@ -327,6 +331,10 @@ function CardProject() {
         </CardDescription>
 
       </CardHeader>
+      <div>
+        <span className="inline-flex items-center px-2 py-1 ring-1 ring-inset ring-default-medium text-heading text-sm font-medium rounded bg-neutral-secondary-medium">MySQL</span>        
+        <span className="inline-flex items-center px-2 py-1 ring-1 ring-inset ring-default-medium text-heading text-sm font-medium rounded bg-neutral-secondary-medium">Python</span>
+      </div>
       <CardFooter>
         <Button className="w-full">View Event</Button>
       </CardFooter>
