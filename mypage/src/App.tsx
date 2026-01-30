@@ -39,9 +39,12 @@ import {
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
+import { Button as FlowbiteButton } from 'flowbite-react';
+
 export function App() {
   return (
     <main className="snap-container">
+      <FlowbiteButton>Flowbite button</FlowbiteButton>
       <AnimatedThemeToggler className="fixed top-4 right-4 z-50" />
       <DockDemo />
       {mainPageButton()}
@@ -305,7 +308,7 @@ function CardProject() {
         <Button className="w-full">View Event</Button>
       </CardFooter>
     </Card>
-
+    
     <Card className="relative mx-auto w-full max-w-sm pt-0">
       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
       <img
@@ -322,6 +325,7 @@ function CardProject() {
           A practical talk on component APIs, accessibility, and shipping
           faster.
         </CardDescription>
+
       </CardHeader>
       <CardFooter>
         <Button className="w-full">View Event</Button>
