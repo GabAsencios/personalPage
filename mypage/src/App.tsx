@@ -70,7 +70,8 @@ export function App() {
         <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
           Projects
         </h2>
-        <div className="card-container">
+        <div className="card-container flex flex-row gap-8 justify-center">
+
           <CardProject/>
         </div>
 
@@ -291,7 +292,7 @@ const Icons = {
 function CardProject() {
   return (
     <>
-    <Card className="relative mx-auto w-full max-w-sm pt-0">
+    <Card className="relative mx-auto w-full max-w-lg pt-0">
       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
       <img
         src="https://avatar.vercel.sh/shadcn1"
@@ -312,8 +313,9 @@ function CardProject() {
         <Button className="w-full">View Event</Button>
       </CardFooter>
     </Card>
-    
-    <Card className="relative mx-auto w-full max-w-sm pt-0">
+
+
+    <Card className="relative mx-auto w-full max-w-lg pt-0">
       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
       <img
         src="https://avatar.vercel.sh/shadcn1"
@@ -321,9 +323,6 @@ function CardProject() {
         className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
       />
       <CardHeader>
-        <CardAction>
-          <Badge variant="secondary">Featured</Badge>
-        </CardAction>
         <CardTitle>Design systems meetup</CardTitle>
         <CardDescription>
           A practical talk on component APIs, accessibility, and shipping
@@ -331,12 +330,17 @@ function CardProject() {
         </CardDescription>
 
       </CardHeader>
-      <div>
-        <span className="inline-flex items-center px-2 py-1 ring-1 ring-inset ring-default-medium text-heading text-sm font-medium rounded bg-neutral-secondary-medium">MySQL</span>        
-        <span className="inline-flex items-center px-2 py-1 ring-1 ring-inset ring-default-medium text-heading text-sm font-medium rounded bg-neutral-secondary-medium">Python</span>
-      </div>
-      <CardFooter>
-        <Button className="w-full">View Event</Button>
+      <CardFooter className="flex justify-between items-end">
+        <div>
+          <p style={{ fontFamily: "DM Sans", fontWeight: "550", color: "grey", fontSize: "13px"}}>TECH STACK</p>          <div className="flex gap-2">
+            <Badge variant="secondary">MySQL</Badge>
+            <Badge variant="secondary">Python</Badge>
+          </div>
+        </div>
+        <a href="#" className="inline-flex font-medium items-center text-fg-brand hover:underline">
+        See Project
+        <svg className="w-4 h-4 ms-2 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/></svg>
+    </a>
       </CardFooter>
     </Card>
     </>
@@ -356,23 +360,18 @@ function CardBio() {
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
             <p>
-              [Your bio description goes here. This is a great place to introduce yourself and talk about your background.]
+              Fourth year Computer Science student specializing in AI and Machine learning and Full stack development. Experienced in implementing and
+              evaluating advanced architectures, including Transformers, LSTMs, and CNNs, for complex tasks like time-series
+              forecasting and image classification. Eager to contribute to a high-performing engineering team and grow alongside
+              experienced peers to launch robust and impactful products.
             </p>
-            <p>
-              [You can add more details about your experience, passions, and what you are looking for.]
-            </p>
+            
           </div>
           <CardFooter className="p-0 mt-6">
-            <Button>[Contact]</Button>
+            
           </CardFooter>
         </div>
-        <div className="w-full md:w-2/5 relative min-h-[300px]">
-          <img
-            src="https://avatar.vercel.sh/shadcn1"
-            alt="Profile"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
+        
       </div>
     </Card>
   )
