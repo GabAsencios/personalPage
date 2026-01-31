@@ -171,6 +171,10 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.dark .skill-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .skill-icon {
   height: 4rem;
   width: 4rem;
@@ -178,8 +182,16 @@
   transition: opacity 300ms;
 }
 
+.dark .skill-icon {
+  height: 4rem;
+  width: 4rem;
+  color: white;
+  transition: opacity 300ms;
+}
+
 .skill-item:hover .skill-icon {
   opacity: 0;
+
 }
 
 .skill-name {
@@ -192,8 +204,18 @@
   text-align: center;
 }
 
+.dark .skill-name {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+  opacity: 0;
+  transition: opacity 300ms;
+  text-align: center;
+}
+
 .skill-item:hover .skill-name {
-  opacity: 1;
+  opacity: 10;
 }
 
 .contact-section {
@@ -202,5 +224,3 @@
   scroll-snap-align: start;
   position: relative;
 }
-
-.card-container {}

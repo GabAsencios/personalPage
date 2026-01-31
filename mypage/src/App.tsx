@@ -44,9 +44,13 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 import { Button as FlowbiteButton } from 'flowbite-react';
 
+import { GradientBackground } from '@/components/animate-ui/components/backgrounds/gradient';
+
 export function App() {
   return (
+    
     <main className="snap-container">
+       {/* <GradientBackground className="absolute inset-0 flex items-center justify-center rounded-xl" /> */}
       <FlowbiteButton>Flowbite button</FlowbiteButton>
       <AnimatedThemeToggler className="fixed top-4 right-4 z-50" />
       <DockDemo />
@@ -301,7 +305,7 @@ interface ProjectProps {
 
 function CardProject({ title, description, tech, className }: ProjectProps) {
   return (
-    <Card className={`flex flex-col h-126 bg-white dark:bg-zinc-950 border-zinc-100 dark:border-zinc-800 shadow-sm rounded-2xl p-2 ${className}`}>
+    <Card className={`flex flex-col h-126  shadow-sm rounded-2xl p-2 ${className}`}>
       <CardHeader className="relative">
         {/* GitHub icon on top right */}
         {/* <div className="absolute right-6 top-6">
@@ -339,7 +343,8 @@ function CardProject({ title, description, tech, className }: ProjectProps) {
   )
 }
 
-export default function ProjectGallery() {
+
+function ProjectGallery() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
       
@@ -376,6 +381,23 @@ export default function ProjectGallery() {
     </div>
   )
 }
+
+// COMPLETE
+// function CardBio() {
+//   return (
+//     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
+      
+//       {/* LARGE CARD (Spans 2 columns) */}
+//       <CardProject 
+//         className="md:col-span-2"
+//         title="QwikRide – Bike Sharing System"
+//         description="Bike sharing platform with role-based access control and JWT authentication. Optimized for fast load times with code splitting."
+//         tech={["React", "Spring Boot", "Spring Security", "Maven", "JWT"]}
+//       />
+
+//     </div>
+//   )
+// }
 
 
 function CardBio() {
