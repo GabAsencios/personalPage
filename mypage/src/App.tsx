@@ -47,6 +47,9 @@ import { Button as FlowbiteButton } from 'flowbite-react';
 import { GradientBackground } from '@/components/animate-ui/components/backgrounds/gradient';
 
 import {HomeIcon} from '@/components/ui/home';
+import { ExternalLink } from '@/components/animate-ui/icons/external-link';
+import { AnimateIcon } from '@/components/animate-ui/icons/icon';
+
 
 export function App() {
   return (
@@ -136,7 +139,7 @@ const scrollToSection = (className: string) => {
 function ButtonPages() {
   return (
     <div className="flex flex-row gap-4">
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-3">
         <InteractiveHoverButton
           onClick={() => scrollToSection("about-section")}
         >
@@ -195,6 +198,7 @@ function SkillsGrid() {
     { id: 13, icon: SiGooglecolab, name: "Google Colab 80%" },
     { id: 14, icon: SiWireshark, name: "Wireshark 75%" },
     { id: 15, icon: SiTypescript, name: "TypeScript 70%" },
+    
     
   ];
 

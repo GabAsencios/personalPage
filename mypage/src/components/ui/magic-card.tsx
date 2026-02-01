@@ -16,7 +16,7 @@ interface MagicCardProps {
 export function MagicCard({
   children,
   className,
-  gradientSize = 300,
+  gradientSize = 400,
   gradientColor = "#8a14d8",
   gradientOpacity = 0,
   gradientFrom = "#9E7AFF",
@@ -85,7 +85,7 @@ export function MagicCard({
           `,
         }}
       />
-      <div className="bg-background absolute inset-px rounded-[inherit]" />
+      <div className="bg-background absolute inset-1 rounded-[inherit]" />
       <motion.div
         className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
