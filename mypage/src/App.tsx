@@ -121,20 +121,47 @@ export function App() {
 
 
 function DockDemo() {
+  const [copied, setCopied] = React.useState(false);
+
+  const handleEmailCopy = () => {
+    const email = "gabriel.asencios98@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   return (
     <div className="dock-container">
     <Dock direction="top" iconMagnification={60} iconDistance={30} >
-      <DockIcon className="bg-black/15 dark:bg-white/20">
-        <Icons.gitHub className="size-6" />
+      <DockIcon className="bg-black/15 dark:bg-white/20" title="GitHub">
+        <a href="https://github.com/GabAsencios" target="_blank" rel="noopener noreferrer">
+          <Icons.gitHub className="size-6" />
+        </a>
       </DockIcon>
-      <DockIcon className="bg-black/15 dark:bg-white/20">
-        <Linkedin className="size-6" />
+      <DockIcon className="bg-black/15 dark:bg-white/20" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/gabriel-asencios-3133b0349" target="_blank" rel="noopener noreferrer">
+          <Linkedin className="size-6" />
+        </a>
       </DockIcon>
-      <DockIcon className="bg-black/15 dark:bg-white/20">
-        <FileText className="size-6" />
+      <DockIcon className="bg-black/15 dark:bg-white/20" title="Open Resume">
+        <a href="public/Resume_ML.pdf" target="_blank" rel="noopener noreferrer">
+          <FileText className="size-6" />
+        </a>
       </DockIcon>
-      <DockIcon className="bg-black/15 dark:bg-white/20">
-        <Mail className="size-6" />
+      <DockIcon className="bg-black/15 dark:bg-white/20" title="Copy email">
+        <button 
+          onClick={handleEmailCopy}
+          className="cursor-pointer focus:outline-none"
+          title={copied ? "Email copied!" : "Copy email"}
+        >
+          <Mail className="size-6" />
+        </button>
+        {copied && (
+          <div className="fixed top-8 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium z-50">
+            Email copied to clipboard!
+          </div>
+        )}
       </DockIcon>
     </Dock>
     </div>
@@ -359,7 +386,7 @@ function ProjectGallery() {
         className="md:col-span-2"
         title="Retrieval Augmented Time Series Forecasting"
         description="Reproduced the RAFT framework by integrating a similarity-based retrieval module with an MLP forecaster to capture long-term historical patterns. Validated against 10 multivariate benchmarks, achieving results consistent with original research, and established a new performance benchmark on a non-stationary e-commerce dataset to prove real-world generalization."
-        tech={["Python", "PyTorch", "uv", "NumPy", "Pandas", "sktime", "matplotlib", "tqdm"]}
+        tech={["Python", "PyTorch", "uv", "NumPy", "Pandas", "matplotlib",]}
         projectUrl="https://github.com/GabAsencios/Deep_Learning"
       />
 
@@ -367,7 +394,7 @@ function ProjectGallery() {
       <CardProject 
         title="Airplane Shooting Game"
         description="3D airplane shooter in C++ and OpenGL, featuring a custom rendering engine with Phong lighting, dynamic shadows, and texture mapping."
-        tech={["C++", "OpenGL", "Phong Lighting", "Animation", "Collision Detection"]}
+        tech={["C++", "OpenGL", "Phong Lighting"]}
         projectUrl="https://github.com/GabAsencios/Computer_Graphics_A2"
       />
 
