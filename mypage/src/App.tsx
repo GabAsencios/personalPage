@@ -172,7 +172,7 @@ function ButtonPages() {
 function MainPageButton() {
   return (
     <div className="home-button-container">
-      <InteractiveHoverButton><HomeIcon onClick={() => scrollToSection("main-section")}>
+      <InteractiveHoverButton onClick={() => scrollToSection("main-section")}><HomeIcon>
       </HomeIcon></InteractiveHoverButton>
       
     </div>
@@ -345,7 +345,7 @@ function CardProject({ title, description, tech, className }: ProjectProps) {
 
 function ProjectGallery() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
       
       {/* LARGE CARD (Spans 2 columns) */}
       <CardProject 
@@ -401,7 +401,7 @@ function ProjectGallery() {
 
 function CardBio() {
   return (
-    <Card className="w-full max-w-4xl mx-auto overflow-hidden">
+    <Card className="w-full max-w-4xl mx-auto overflow-hidden border-none">
       <div className="flex flex-col md:flex-row">
         <div className="flex-1 p-6 flex flex-col justify-center">
           <CardHeader className="p-0 mb-4">
