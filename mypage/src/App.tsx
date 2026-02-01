@@ -116,6 +116,10 @@ export function App() {
   );
 }
 
+
+// Helper Functions and Component calls
+
+
 function DockDemo() {
   return (
     <div className="dock-container">
@@ -304,7 +308,7 @@ interface ProjectProps {
 
 function CardProject({ title, description, tech, className }: ProjectProps) {
   return (
-    <MagicCard className={`flex flex-col h-126  shadow-sm rounded-2xl p-2 ${className}`}>
+    <MagicCard className={`flex flex-col h-84  shadow-sm rounded-2xl p-2 ${className}`}>
       <CardHeader className="relative">
           {/* GitHub icon on top right */}
           {/* <div className="absolute right-6 top-6">
@@ -325,7 +329,7 @@ function CardProject({ title, description, tech, className }: ProjectProps) {
               <p className="text-[11px] font-bold text-zinc-400 uppercase tracking-[0.1em] mb-3 text-left ml-4">Tech Stack</p>
               <div className="flex flex-wrap gap-2 mb-3">
                 {tech.map((item) => (
-                  <Badge key={item} variant="secondary" className="rounded-full bg-zinc-100 text-zinc-700 hover:bg-zinc-200 border-none font-normal px-3 py-1">
+                  <Badge key={item} variant="secondary" className="rounded-full bg-zinc-300 text-zinc-1000 dark:text-zinc-700 hover:bg-zinc-200 border-none font-semibold px-3 py-1">
                     {item}
                   </Badge>
                 ))}
