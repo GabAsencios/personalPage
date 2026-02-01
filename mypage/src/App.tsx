@@ -57,11 +57,11 @@ export function App() {
       {mainPageButton()}
       {/* SECTION 1: HERO */}
       <section id="main-section" className="main-section">
-        {/* <img className="selfie-pic" src="/" alt="selfie" /> */}
-        <span className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-          Gabriel Asencios
-        </span>
-        {buttonPages()}
+        {/* <img className="selfie-pic" src="/" alt="selfie" /> */} 
+        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-serif' }}>
+          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Gabriel</span></h1>
+
+        <ButtonPages/>
       </section>
       {/* SECTION 2: ABOUT*/}
       <section id="about-section" className="about-section">
@@ -100,7 +100,7 @@ export function App() {
         <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
           Contact
         </h2>
-        {contactCard()}
+        <ContactCard />
       </section>
     </main>
   );
@@ -136,7 +136,7 @@ const scrollToSection = (className: string) => {
     element.scrollIntoView({ behavior: "smooth" });
   }
 };
-function buttonPages() {
+function ButtonPages() {
   return (
     <div className="flex flex-row gap-4">
       <div>
@@ -214,16 +214,15 @@ function SkillsGrid() {
   );
 }
 
-function contactCard() {
+function ContactCard() {
   return (
     <div className="w-full max-w-md p-4">
       <MagicCard
         className="flex flex-col items-center justify-center p-6 shadow-2xl"
-        gradientColor="#D9D9D955"
       >
         <div className="w-full space-y-4">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-black dark:text-white">
+            <h3 className="text-2xl font-bold ">
               Get in Touch
             </h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -232,7 +231,7 @@ function contactCard() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-black dark:text-white">
+            <label className="text-sm font-medium ">
               Name
             </label>
             <input
@@ -243,7 +242,7 @@ function contactCard() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-black dark:text-white">
+            <label className="text-sm font-medium">
               Email
             </label>
             <input
@@ -254,7 +253,7 @@ function contactCard() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-black dark:text-white">
+            <label className="text-sm font-medium">
               Subject
             </label>
             <input
