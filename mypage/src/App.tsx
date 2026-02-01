@@ -46,6 +46,8 @@ import { Button as FlowbiteButton } from 'flowbite-react';
 
 import { GradientBackground } from '@/components/animate-ui/components/backgrounds/gradient';
 
+import {HomeIcon} from '@/components/ui/home';
+
 export function App() {
   return (
     
@@ -134,7 +136,7 @@ const scrollToSection = (className: string) => {
 function ButtonPages() {
   return (
     <div className="flex flex-row gap-4">
-      <div>
+      <div className="flex flex-row gap-4">
         <InteractiveHoverButton
           onClick={() => scrollToSection("about-section")}
         >
@@ -167,10 +169,9 @@ function ButtonPages() {
 function MainPageButton() {
   return (
     <div className="home-button-container">
-      <InteractiveHoverButton onClick={() => scrollToSection("main-section")}>
-        {" "}
-        Home{" "}
-      </InteractiveHoverButton>
+      <InteractiveHoverButton><HomeIcon onClick={() => scrollToSection("main-section")}>
+      </HomeIcon></InteractiveHoverButton>
+      
     </div>
   );
 }
