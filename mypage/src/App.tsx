@@ -356,23 +356,23 @@ function ProjectGallery() {
       {/* LARGE CARD (Spans 2 columns) */}
       <CardProject 
         className="md:col-span-2"
-        title="QwikRide – Bike Sharing System"
-        description="Bike sharing platform with role-based access control and JWT authentication. Optimized for fast load times with code splitting."
-        tech={["React", "Spring Boot", "Spring Security", "Maven", "JWT"]}
+        title="Retrieval Augmented Time Series Forecasting"
+        description="Reproduced the RAFT framework by integrating a similarity-based retrieval module with an MLP forecaster to capture long-term historical patterns. Validated against 10 multivariate benchmarks, achieving results consistent with original research, and established a new performance benchmark on a non-stationary e-commerce dataset to prove real-world generalization."
+        tech={["Python", "PyTorch", "uv", "NumPy", "Pandas", "sktime", "matplotlib", "tqdm"]}
       />
 
       {/* SMALL CARD (Spans 1 column) */}
       <CardProject 
-        title="AI Medical Chatbot"
-        description="Medical Q&A chatbot using LLMs and semantic search. Integrated with vector database."
-        tech={["Python", "Flask", "Groq API", "Pinecone"]}
+        title="Airplane Shooting Game"
+        description="3D airplane shooter in C++ and OpenGL, featuring a custom rendering engine with Phong lighting, dynamic shadows, and texture mapping."
+        tech={["C++", "OpenGL", "Phong Lighting", "Animation", "Collision Detection"]}
       />
 
       {/* ANOTHER SMALL CARD */}
       <CardProject 
-        title="Sony Memory Stick Hack"
-        description="Reverse-engineered Sony Memory Stick Magic Gate protection to recover lost photos."
-        tech={["Hardware Hacking", "Reverse Engineering"]}
+        title="Database Volleyball Club"
+        description="Created a normalized MySQL relational database (3NF/BCNF) for managing club operations, optimized for data integrity and query performance. Developed a Python Flask web for GUI."
+        tech={["MySQL", "Python", "Flask"]}
       />
 
       {/* LARGE CARD */}
@@ -411,13 +411,10 @@ function CardBio() {
       <div className="flex flex-col md:flex-row">
         <div className="flex-1 p-6 flex flex-col justify-center">
           <CardHeader className="p-0 mb-4">
-            <CardTitle className="text-2xl font-bold">[Your Name]</CardTitle>
-            <CardDescription className="text-lg">
-              [Your Title]
-            </CardDescription>
+            <CardTitle className="text-2xl font-bold">A little about me</CardTitle>
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
-            <p>
+            <p style={{ fontSize: "22px" }}>
               Fourth year Computer Science student specializing in AI and Machine learning and Full stack development. Experienced in implementing and
               evaluating advanced architectures, including Transformers, LSTMs, and CNNs, for complex tasks like time-series
               forecasting and image classification. Eager to contribute to a high-performing engineering team and grow alongside
