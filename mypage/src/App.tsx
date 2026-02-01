@@ -303,10 +303,11 @@ interface ProjectProps {
   title: string;
   description: string;
   tech: string[];
-  className?: string; 
+  className?: string;
+  projectUrl?: string;
 }
 
-function CardProject({ title, description, tech, className }: ProjectProps) {
+function CardProject({ title, description, tech, className, projectUrl }: ProjectProps) {
   return (
     <MagicCard className={`flex flex-col h-84  shadow-sm rounded-2xl p-2 ${className}`}>
       <CardHeader className="relative">
@@ -338,7 +339,7 @@ function CardProject({ title, description, tech, className }: ProjectProps) {
           </CardContent>
 
           <CardFooter className="pt-4 border-t border-zinc-200">
-            <a href="#" className="flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-purple-700 transition-colors">
+            <a href={projectUrl || "#"} target={projectUrl ? "_blank" : undefined} rel={projectUrl ? "noopener noreferrer" : undefined} className="flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-purple-700 transition-colors">
               View Project
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -359,6 +360,7 @@ function ProjectGallery() {
         title="Retrieval Augmented Time Series Forecasting"
         description="Reproduced the RAFT framework by integrating a similarity-based retrieval module with an MLP forecaster to capture long-term historical patterns. Validated against 10 multivariate benchmarks, achieving results consistent with original research, and established a new performance benchmark on a non-stationary e-commerce dataset to prove real-world generalization."
         tech={["Python", "PyTorch", "uv", "NumPy", "Pandas", "sktime", "matplotlib", "tqdm"]}
+        projectUrl="https://github.com/GabAsencios/Deep_Learning"
       />
 
       {/* SMALL CARD (Spans 1 column) */}
@@ -366,6 +368,7 @@ function ProjectGallery() {
         title="Airplane Shooting Game"
         description="3D airplane shooter in C++ and OpenGL, featuring a custom rendering engine with Phong lighting, dynamic shadows, and texture mapping."
         tech={["C++", "OpenGL", "Phong Lighting", "Animation", "Collision Detection"]}
+        projectUrl="https://github.com/GabAsencios/Computer_Graphics_A2"
       />
 
       {/* ANOTHER SMALL CARD */}
@@ -373,14 +376,16 @@ function ProjectGallery() {
         title="Database Volleyball Club"
         description="Created a normalized MySQL relational database (3NF/BCNF) for managing club operations, optimized for data integrity and query performance. Developed a Python Flask web for GUI."
         tech={["MySQL", "Python", "Flask"]}
+        projectUrl="https://github.com/GabAsencios/VolleyballClubDatabase"
       />
 
       {/* LARGE CARD */}
       <CardProject 
         className="md:col-span-2"
-        title="LLM Leaderboard Web Platform"
-        description="Performance leaderboard for LLM models with fast queries and real-time updates."
-        tech={["React", "Python", "Flask", "PostgreSQL", "AWS"]}
+        title="My Page – Personal Portfolio Website"
+        description="Architected and deployed a full-stack personal portfolio using React and TypeScript, styled with Tailwind CSS for a responsive, modern UI. Built a Node.js backend to manage the contact section's messaging logic and integrated various third-party components for enhanced interactivity. The entire application is hosted on AWS, leveraging cloud infrastructure for high availability and performance."
+        tech={["React", "TypeScript", "Tailwind CSS", "Node.js", "AWS", "HTML"]}
+        projectUrl="https://github.com/GabAsencios/personalPage"
       />
 
     </div>
