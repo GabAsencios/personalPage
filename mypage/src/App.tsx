@@ -67,16 +67,14 @@ export function App() {
       </section>
       {/* SECTION 2: ABOUT*/}
       <section id="about-section" className="about-section justify-center min-h-screen w-full flex flex-col items-center gap-8">
-        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-          About
-        </h2>
+        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-serif' }}>
+          About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Me</span></h1>
         <CardBio/>
       </section>
       {/* SECTION 3: PROJECTS */}
       <section id="projects-section" className="projects-section justify-center min-h-screen w-full flex flex-col items-center gap-8">
-        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-          Projects
-        </h2>
+        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-serif' }}>
+          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Projects</span></h1>
         <div className="card-container flex flex-row gap-8 justify-center">
 
           <ProjectGallery />
@@ -87,21 +85,18 @@ export function App() {
       {/* SECTION 4: SKILLS */}
       <section
         id="skills-section"
-        className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8"
-      >
-        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-          Skills
-        </h2>
+        className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8">
+        <h1 className="mb-1 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-serif' }}>
+          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Skills</span></h1>
+          <p className="text-lg mb-4" style={{ fontFamily: 'DM-sans, sans-serif' } }>Hover Over A Skill For My Current Proficiency</p>
         <SkillsGrid />
       </section>
       {/* SECTION 5: CONTACT */}
       <section
         id="contact-section"
-        className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8"
-      >
-        <h2 className="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-          Contact
-        </h2>
+        className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8">
+        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-serif' }}>
+          Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Me</span></h1>
         <ContactCard />
       </section>
     </main>
