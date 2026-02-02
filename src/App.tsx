@@ -255,7 +255,7 @@ function ContactCard() {
         <div className="w-full space-y-4">
           <div className="text-center">
             <h3 className="text-2xl font-bold ">
-              Get in Touch
+              COMING SOON!
             </h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               Send me a message and I'll get back to you.
