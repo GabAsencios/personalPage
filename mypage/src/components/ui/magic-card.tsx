@@ -16,11 +16,11 @@ interface MagicCardProps {
 export function MagicCard({
   children,
   className,
-  gradientSize = 400,
+  gradientSize = 300,
   gradientColor = "#8a14d8",
   gradientOpacity = 0,
-  gradientFrom = "#9E7AFF",
-  gradientTo = "#FE8BBB",
+  gradientFrom = "#FE8BBB",
+  gradientTo = "#9E7AFF",
 }: MagicCardProps) {
   const mouseX = useMotionValue(-gradientSize)
   const mouseY = useMotionValue(-gradientSize)
