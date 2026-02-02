@@ -3,16 +3,14 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd mypage
-        - npm install
+        - npm ci
     build:
       commands:
-        - cd mypage
         - npm run build
   artifacts:
-    baseDirectory: mypage/dist
+    baseDirectory: dist
     files:
       - "**/*"
   cache:
     paths:
-      - mypage/node_modules/**/*
+      - node_modules/**/*
