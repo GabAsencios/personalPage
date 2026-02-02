@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd mypage
+        - npm install
+    build:
+      commands:
+        - cd mypage
+        - npm run build
+  artifacts:
+    baseDirectory: mypage/dist
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - mypage/node_modules/**/*
