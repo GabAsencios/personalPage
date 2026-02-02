@@ -9,7 +9,7 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { MagicCard } from "@/components/ui/magic-card.tsx";
 
 import { Linkedin, FileText, Mail } from "lucide-react";
-import { FaJava, FaDatabase } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
 import {
   SiReact,
   SiJavascript,
@@ -29,10 +29,9 @@ import {
 } from "react-icons/si";
 
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -42,16 +41,9 @@ import {
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
-import { Button as FlowbiteButton } from 'flowbite-react';
-
-import { GradientBackground } from '@/components/animate-ui/components/backgrounds/gradient';
-
 
 import {HomeIcon} from '@/components/ui/home';
-import { ExternalLink } from '@/components/animate-ui/icons/external-link';
-import { AnimateIcon } from '@/components/animate-ui/icons/icon';
 
-import { cn } from "@/lib/utils"
 import { GridPattern } from "@/components/ui/grid-pattern"
 
 
