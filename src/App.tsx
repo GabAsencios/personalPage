@@ -9,7 +9,7 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { MagicCard } from "@/components/ui/magic-card.tsx";
 
 import { Linkedin, FileText, Mail } from "lucide-react";
-import { FaJava, FaAws } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
 import {
   SiReact,
   SiJavascript,
@@ -62,7 +62,6 @@ export function App() {
       <InteractiveHoverButton onClick={() => scrollToSection("main-section")}><HomeIcon>
       </HomeIcon></InteractiveHoverButton>
     </div>
-
       {/* SECTION 1: HERO */}
       <section id="main-section" className="main-section relative z-10">
         {/* <img className="selfie-pic" src="/" alt="selfie" /> */} 
@@ -71,8 +70,24 @@ export function App() {
           </h1>
         <ButtonPages/>
       </section>
+      {/* SECTION 2: ABOUT*/}
+      <section id="about-section" className="about-section justify-center min-h-screen w-full flex flex-col items-center gap-8 relative z-10">
+        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-mono' }}>
+          About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Me</span></h1>
+        <CardBio/>
+      </section>
+      {/* SECTION 3: PROJECTS */}
+      <section id="projects-section" className="projects-section justify-center min-h-screen w-full flex flex-col items-center gap-8 relative z-10">
+        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-mono' }}>
+          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Projects</span></h1>
+        <div className="card-container flex flex-row gap-8 justify-center">
 
-      {/* SECTION 2: SKILLS */}
+          <ProjectGallery />
+          
+        </div>
+
+      </section>
+      {/* SECTION 4: SKILLS */}
       <section
         id="skills-section"
         className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8 relative z-10">
@@ -81,24 +96,6 @@ export function App() {
           <p className="text-lg mb-4" style={{ fontFamily: 'DM-sans, sans-serif' } }>Hover Over A Skill For My Current Proficiency</p>
         <SkillsGrid />
       </section>
-
-      {/* SECTION 3: PROJECTS */}
-      <section id="projects-section" className="projects-section justify-center min-h-screen w-full flex flex-col items-center gap-8 relative z-10">
-        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-mono' }}>
-          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Projects</span></h1>
-        <div className="card-container flex flex-row gap-8 justify-center">
-          <ProjectGallery />
-        </div>
-      </section>
-      
-
-      {/* SECTION 4: ABOUT*/}
-      <section id="about-section" className="about-section justify-center min-h-screen w-full flex flex-col items-center gap-8 relative z-10">
-        <h1 className="mb-6 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-mono' }}>
-          About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Me</span></h1>
-        <CardBio/>
-      </section>
-      
       {/* SECTION 5: CONTACT */}
       <section
         id="contact-section"
@@ -229,11 +226,11 @@ function SkillsGrid() {
     { id: 7, icon: SiMongodb, name: "MongoDB 80%" },
     { id: 8, icon: SiNodedotjs, name: "Node.js 70%" },
     { id: 9, icon: SiPytorch, name: "PyTorch 90%" },
-    { id: 10, icon: FaAws, name: "AWS 75%" },
-    { id: 11, icon: SiScikitlearn, name: "Scikit-learn 90%" },
-    { id: 12, icon: SiMysql, name: "MySQL 80%" },
-    { id: 13, icon: SiJupyter, name: "Jupyter 80%" },
-    { id: 14, icon: SiGooglecolab, name: "Google Colab 80%" },
+    { id: 10, icon: SiScikitlearn, name: "Scikit-learn 90%" },
+    { id: 11, icon: SiMysql, name: "MySQL 80%" },
+    { id: 12, icon: SiJupyter, name: "Jupyter 80%" },
+    { id: 13, icon: SiGooglecolab, name: "Google Colab 80%" },
+    { id: 14, icon: SiWireshark, name: "Wireshark 75%" },
     { id: 15, icon: SiTypescript, name: "TypeScript 70%" },
     
     
@@ -254,7 +251,7 @@ function SkillsGrid() {
 function ContactCard() {
   return (
     <div className="w-full max-w-md p-4">
-      <MagicCard className="flex flex-col items-center justify-center p-6 shadow-2xl">
+      <MagicCard className="flex flex-col items-center justify-center p-6 shadow-2xl rounded-xl">
         <div className="w-full space-y-4">
           <div className="text-center">
             <h3 className="text-2xl font-bold ">
@@ -442,7 +439,10 @@ function CardBio() {
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
             <p style={{ fontSize: "22px" }}>
-              Fourth year Computer Science student passionate about full-stack development and AI/ML applications.  Experienced in database design, 3D graphics programming, and web development. Eager to contribute to a high-performing engineering team and grow alongside experienced peers to launch robust and impactful products. 
+              Fourth year Computer Science student specializing in AI and Machine learning and Full stack development. Experienced in implementing and
+              evaluating advanced architectures, including Transformers, LSTMs, and CNNs, for complex tasks like time-series
+              forecasting and image classification. Eager to contribute to a high-performing engineering team and grow alongside
+              experienced peers to launch robust and impactful products.
             </p>
             
           </div>
