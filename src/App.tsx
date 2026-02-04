@@ -439,7 +439,7 @@ function CardBio() {
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
             <p style={{ fontSize: "22px" }}>
-              Forth year Computer Science student passionate about full-stack development and AI/ML applications.  Experienced in database design, 3D graphics programming, and web development. Eager to contribute to a high-performing engineering team and grow alongside experienced peers to launch robust and impactful products. 
+              Fourth year Computer Science student passionate about full-stack development and AI/ML applications.  Experienced in database design, 3D graphics programming, and web development. Eager to contribute to a high-performing engineering team and grow alongside experienced peers to launch robust and impactful products. 
             </p>
             
           </div>
