@@ -9,7 +9,7 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { MagicCard } from "@/components/ui/magic-card.tsx";
 
 import { Linkedin, FileText, Mail } from "lucide-react";
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaAws } from "react-icons/fa";
 import {
   SiReact,
   SiJavascript,
@@ -229,11 +229,11 @@ function SkillsGrid() {
     { id: 7, icon: SiMongodb, name: "MongoDB 80%" },
     { id: 8, icon: SiNodedotjs, name: "Node.js 70%" },
     { id: 9, icon: SiPytorch, name: "PyTorch 90%" },
-    { id: 10, icon: SiScikitlearn, name: "Scikit-learn 90%" },
-    { id: 11, icon: SiMysql, name: "MySQL 80%" },
-    { id: 12, icon: SiJupyter, name: "Jupyter 80%" },
-    { id: 13, icon: SiGooglecolab, name: "Google Colab 80%" },
-    { id: 14, icon: SiWireshark, name: "Wireshark 75%" },
+    { id: 10, icon: FaAws, name: "AWS 75%" },
+    { id: 11, icon: SiScikitlearn, name: "Scikit-learn 90%" },
+    { id: 12, icon: SiMysql, name: "MySQL 80%" },
+    { id: 13, icon: SiJupyter, name: "Jupyter 80%" },
+    { id: 14, icon: SiGooglecolab, name: "Google Colab 80%" },
     { id: 15, icon: SiTypescript, name: "TypeScript 70%" },
     
     
