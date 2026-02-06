@@ -69,6 +69,7 @@ export function App() {
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Gabriel</span>
           </h1>
         <ButtonPages/>
+        
       </section>
       {/* SECTION 2: ABOUT*/}
       <section id="about-section" className="about-section justify-center min-h-screen w-full flex flex-col items-center gap-8 relative z-10">
