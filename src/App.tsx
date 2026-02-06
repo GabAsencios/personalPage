@@ -138,7 +138,7 @@ function DockDemo() {
         </a>
       </DockIcon>
       <DockIcon className="bg-black/15 dark:bg-white/20" title="Open Resume">
-        <a href="Resume_ML.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/Resume_ML.pdf" target="_blank" rel="noopener noreferrer">
           <FileText className="size-6" />
         </a>
       </DockIcon>
