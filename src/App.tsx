@@ -223,7 +223,7 @@ function SkillsGrid() {
     { id: 3, icon: SiHtml5, name: "HTML 85%" },
     { id: 4, icon: SiCss3, name: "CSS 80%" },
     { id: 5, icon: SiCplusplus, name: "C++ 75%" },
-    { id: 6, icon: SiReact, name: "React 70%" },
+    { id: 6, icon: SiReact, name: "React 80%" },
     { id: 7, icon: SiMongodb, name: "MongoDB 80%" },
     { id: 8, icon: SiNodedotjs, name: "Node.js 70%" },
     { id: 9, icon: SiPytorch, name: "PyTorch 90%" },
