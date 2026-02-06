@@ -79,9 +79,9 @@
   scroll-snap-type: y mandatory;
 }
 
+/* Hide Scrollbar */
 .snap-container::-webkit-scrollbar {
   display: none;
-  /* Chrome, Safari, Opera */
 }
 
 /* Individual Slides */
