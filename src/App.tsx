@@ -19,13 +19,13 @@ import {
   SiPython,
   SiCplusplus,
   SiPytorch,
-  SiScikitlearn,
   SiMysql,
   SiJupyter,
   SiGooglecolab,
   SiWireshark,
   SiMongodb,
   SiTypescript,
+  SiAmazonwebservices
 } from "react-icons/si";
 
 import { Badge } from "@/components/ui/badge"
@@ -226,7 +226,7 @@ function SkillsGrid() {
     { id: 7, icon: SiMongodb, name: "MongoDB 80%" },
     { id: 8, icon: SiNodedotjs, name: "Node.js 70%" },
     { id: 9, icon: SiPytorch, name: "PyTorch 90%" },
-    { id: 10, icon: SiScikitlearn, name: "Scikit-learn 90%" },
+    { id: 10, icon: SiAmazonwebservices, name: "AWS 70%" },
     { id: 11, icon: SiMysql, name: "MySQL 80%" },
     { id: 12, icon: SiJupyter, name: "Jupyter 80%" },
     { id: 13, icon: SiGooglecolab, name: "Google Colab 80%" },
