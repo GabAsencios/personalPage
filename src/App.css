@@ -54,10 +54,17 @@
 }
 
 .bio-text {
-  color: #888;
+  color: #444;
+  font-family: 'DM-sans, sans-serif';
+  font-size: 22px;
+  font-weight: 500;
   margin-top: 1rem;
-  font-size: 2rem;
-  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dark .bio-text {
+  color: rgb(197, 197, 197);
 }
 
 .selfie-pic {

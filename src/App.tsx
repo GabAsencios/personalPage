@@ -438,12 +438,12 @@ function CardBio() {
             <CardTitle className="text-2xl font-bold">A little about me</CardTitle>
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
-            <p style={{ fontSize: "22px" }}>
+            <p className="bio-text">
               Fourth year Computer Science student passionate about full-stack development and AI/ML applications. Experienced
 in database design, 3D graphics programming, and web development. Eager to contribute to a high-performing
 engineering team and grow alongside experienced peers to launch robust and impactful products.
             </p>
-            <p style={{ fontSize: "22px" }}>
+            <p className="bio-text">
               Outside of academics, I enjoy rockclimbing, playing video games, and exploring new technologies. I'm always looking for
 opportunities to learn and take on new challenges.
             </p>
