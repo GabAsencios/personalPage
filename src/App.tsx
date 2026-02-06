@@ -436,7 +436,7 @@ function CardBio() {
       <div className="flex flex-col md:flex-row">
         <div className="flex-1 p-6 flex flex-col justify-center">
           <CardHeader className="p-0 mb-4">
-            <CardTitle className="text-2xl font-bold">A little about me</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center">A little about me</CardTitle>
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
             <p className="bio-text">
