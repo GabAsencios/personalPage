@@ -445,7 +445,7 @@ in database design, 3D graphics programming, and web development. Eager to contr
 engineering team and grow alongside experienced peers to launch robust and impactful products.
             </p>
             <p className="bio-text">
-              Outside of academics, I enjoy rockclimbing, playing video games, and exploring new technologies. I'm always looking for
+              Outside of academics, I enjoy rock climbing, playing video games, and exploring new technologies. I'm always looking for
 opportunities to learn and take on new challenges.
             </p>
             
