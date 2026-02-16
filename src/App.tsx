@@ -59,7 +59,7 @@ export function App() {
         </div>
         
       <div className="home-button-container">
-      <InteractiveHoverButton onClick={() => scrollToSection("main-section")}><HomeIcon>
+      <InteractiveHoverButton id="shortcut-button" onClick={() => scrollToSection("main-section")}><HomeIcon>
       </HomeIcon></InteractiveHoverButton>
     </div>
       {/* SECTION 1: HERO */}
@@ -94,7 +94,7 @@ export function App() {
         className="skills-section min-h-screen w-full flex flex-col items-center justify-center gap-8 relative z-10">
         <h1 className="mb-1 text-3xl font-bold text-heading md:text-5xl lg:text-6xl" style={{ fontFamily: 'DM-sans, sans-mono' }}>
           My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Skills</span></h1>
-          <p className="text-lg mb-4" style={{ fontFamily: 'DM-sans, sans-serif' } }>Hover Over A Skill For My Current Proficiency</p>
+          <p id="skills-subtitle" className="" style={{ fontFamily: 'DM-sans, sans-serif' }}>Hover Over A Skill For My Current Proficiency</p>
         <SkillsGrid />
       </section>
       {/* SECTION 5: CONTACT */}
@@ -184,25 +184,25 @@ function ButtonPages() {
   return (
     <div className="flex flex-row gap-4">
       <div className="flex flex-row gap-3">
-        <InteractiveHoverButton
+        <InteractiveHoverButton id="shortcut-button"
           onClick={() => scrollToSection("about-section")}
         >
           {" "}
           About{" "}
         </InteractiveHoverButton>
-        <InteractiveHoverButton
+        <InteractiveHoverButton id="shortcut-button"
           onClick={() => scrollToSection("projects-section")}
         >
           {" "}
           Projects{" "}
         </InteractiveHoverButton>
-        <InteractiveHoverButton
+        <InteractiveHoverButton id="shortcut-button"
           onClick={() => scrollToSection("skills-section")}
         >
           {" "}
           Skills{" "}
         </InteractiveHoverButton>
-        <InteractiveHoverButton
+        <InteractiveHoverButton id="shortcut-button"
           onClick={() => scrollToSection("contact-section")}
         >
           {" "}
@@ -350,7 +350,7 @@ function CardProject({ title, description, tech, className, projectUrl }: Projec
               <p className="text-[11px] font-bold text-zinc-400 uppercase tracking-[0.1em] mb-3 text-left ml-4">Tech Stack</p>
               <div className="flex flex-wrap gap-2 mb-3">
                 {tech.map((item) => (
-                  <Badge key={item} variant="secondary" className="rounded-full bg-zinc-300 text-zinc-1000 dark:text-zinc-700 hover:bg-zinc-200 border-none font-semibold px-3 py-1">
+                  <Badge id="tech-container" key={item} variant="secondary" className="rounded-full bg-zinc-300 text-zinc-1000 dark:text-zinc-700 hover:bg-zinc-200 border-none font-semibold px-3 py-1">
                     {item}
                   </Badge>
                 ))}

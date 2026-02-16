@@ -108,6 +108,7 @@
   width: 100%;
   scroll-snap-align: start;
   position: relative;
+  display: flex;
 }
 
 .projects-section {
@@ -239,4 +240,118 @@
 .dark .dashboard-container {
   background-color: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Shortcut button desktop styles */
+#shortcut-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#tech-container {
+  transition: all 300ms;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+
+
+
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 767px) {
+
+  /* Section scaling for mobile */
+  .main-section,
+  .about-section,
+  .projects-section,
+  .skills-section,
+  .contact-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+
+  }
+
+  /* Adjust main section centering */
+  .main-section {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Adjust dashboard padding for mobile */
+  .dock-container {
+    padding-left: 1rem;
+  }
+
+  /* Scale down dashboard height */
+  .dashboard-container {
+    height: 3rem;
+  }
+
+  /* Bio text adjustments */
+  .bio-text {
+    font-size: 16px;
+  }
+
+  /* Adjust selfie picture for mobile */
+  .selfie-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Skills grid mobile layout */
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0rem;
+  }
+
+  /* Skill items mobile size */
+  .skill-item {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .skill-icon {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  /* Card mobile padding */
+  .card {
+    padding: 1rem;
+  }
+
+  #shortcut-button {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  #tech-container {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* Project card font scaling for mobile */
+  [data-slot="card-title"] {
+    font-size: 1rem;
+  }
+
+  [data-slot="card-description"] {
+    font-size: 0.75rem;
+  }
+
+  /* Badge text scaling */
+  [data-slot="card-content"] .flex-wrap>div {
+    font-size: 0.7rem;
+  }
+
+  /* View Project link scaling */
+  [data-slot="card-footer"] a {
+    font-size: 0.7rem;
+  }
+
 }

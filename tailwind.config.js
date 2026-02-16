@@ -37,5 +37,6 @@ module.exports = {
   plugins: [
     require('flowbite/plugin'),
     require('flowbite-typography'),
+    require('fluid-tailwind'),
   ],
 }
