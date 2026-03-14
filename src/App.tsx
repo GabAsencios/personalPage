@@ -440,12 +440,12 @@ function CardBio() {
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
             <p className="bio-text">
-              Fourth year Computer Science student passionate about full-stack development and AI/ML applications. Experienced
-in database design, 3D graphics programming, and web development. Eager to contribute to a high-performing
-engineering team and grow alongside experienced peers to launch robust and impactful products.
+              Fourth year Computer Science student with hands-on experience in full-stack development, AI/ML applications,
+database design, and 3D graphics programming. Eager to contribute to a high-performing team and ship robust,
+impactful software.
             </p>
             <p className="bio-text">
-              Outside of academics, I enjoy rock climbing, playing video games, and exploring new technologies. I'm always looking for
+              Outside of academics, I enjoy rock climbing, chess, and exploring new technologies. I'm always looking for
 opportunities to learn and take on new challenges.
             </p>
             
