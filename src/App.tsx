@@ -410,7 +410,7 @@ Reproduced RAFT, combining similarity-based retrieval with an MLP forecaster for
         title="Spark– Voice First Dating App UI/UX Design"
         description="Led UX research and design from discovery to high-fidelity mockups, following a structured design methodology. Also contributed to the React Native prototype, translating design components into a working mobile interface."
         tech={["React Native", "TypeScript", "Tailwind CSS", "Expo", "Figma", "HTML"]}
-        projectUrl="https://github.com/GabAsencios/personalPage"
+        projectUrl="https://github.com/LH52/Spark/tree/main/spark"
       />
       
 
