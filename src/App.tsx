@@ -420,7 +420,7 @@ Reproduced RAFT, combining similarity-based retrieval with an MLP forecaster for
         className="md:col-span-2"
         title="My Page – Personal Portfolio Website"
         description="Architected and deployed a full-stack personal portfolio using React and TypeScript, styled with Tailwind CSS for a responsive, modern UI. Built a Node.js backend to manage the contact section's messaging logic and integrated various third-party components for enhanced interactivity. The entire application is hosted on AWS, leveraging cloud infrastructure for high availability and performance."
-        tech={["React", "TypeScript", "Tailwind CSS", "Node.js", "AWS", "HTML"]}
+        tech={["React", "TypeScript", "Tailwind CSS", "HTML", "Shadcn UI"]}
         projectUrl="https://github.com/GabAsencios/personalPage"
       />
 
