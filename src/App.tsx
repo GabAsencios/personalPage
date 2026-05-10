@@ -329,7 +329,7 @@ interface ProjectProps {
 
 function CardProject({ title, description, tech, className, projectUrl }: ProjectProps) {
   return (
-    <MagicCard className={`flex flex-col h-84  shadow-sm rounded-2xl p-2 ${className}`}>
+    <MagicCard className={`flex flex-col shadow-sm rounded-2xl p-2 ${className}`}>
       <CardHeader className="relative">
           {/* GitHub icon on top right */}
           {/* <div className="absolute right-6 top-6">
@@ -358,7 +358,7 @@ function CardProject({ title, description, tech, className, projectUrl }: Projec
             </div>
           </CardContent>
 
-          <CardFooter className="pt-4 border-t border-zinc-200">
+          <CardFooter className="h-16 flex items-center pt-4 border-t border-zinc-200">
             <a href={projectUrl || "#"} target={projectUrl ? "_blank" : undefined} rel={projectUrl ? "noopener noreferrer" : undefined} className="flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-purple-700 transition-colors">
               View Project
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
@@ -374,22 +374,25 @@ function ProjectGallery() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
       
+      
       {/* LARGE CARD (Spans 2 columns) */}
       <CardProject 
         className="md:col-span-2"
+        title="FocusGuard– Multimodal Distraction Detection"
+        description="Built a real-time focus monitoring pipeline combining YOLOv8 for webcam-based presence detection and a fine-tuned ResNet18 screen classifier trained on a custom dataset. Optimized the classifier via hyperparameter sweep (AdamW, lr=0.001, dropout=0.5) and implemented robust distraction handling with configurable confidence thresholds, grace periods, and persistence timers to minimize false positives."
+        tech={["Python", "PyTorch", "YOLOv8", "ResNet18"]}
+        projectUrl="https://github.com/GabAsencios/FocusGuard"
+      />
+
+      {/* SMALL CARD */}
+      <CardProject 
         title="Retrieval Augmented Time Series Forecasting"
-        description="Reproduced the RAFT framework by integrating a similarity-based retrieval module with an MLP forecaster to capture long-term historical patterns. Validated against 10 multivariate benchmarks, achieving results consistent with original research, and established a new performance benchmark on a non-stationary e-commerce dataset to prove real-world generalization."
-        tech={["Python", "PyTorch", "uv", "NumPy", "Pandas", "matplotlib",]}
+        description="
+Reproduced RAFT, combining similarity-based retrieval with an MLP forecaster for long-term time series forecasting. Validated across 10 multivariate benchmarks and a non-stationary e-commerce dataset."
+        tech={["Python", "PyTorch", "Pandas"]}
         projectUrl="https://github.com/GabAsencios/Deep_Learning"
       />
 
-      {/* SMALL CARD (Spans 1 column) */}
-      <CardProject 
-        title="Airplane Shooting Game"
-        description="3D airplane shooter in C++ and OpenGL, featuring a custom rendering engine with Phong lighting, dynamic shadows, and texture mapping."
-        tech={["C++", "OpenGL", "Phong Lighting"]}
-        projectUrl="https://github.com/GabAsencios/Computer_Graphics_A2"
-      />
 
       {/* ANOTHER SMALL CARD */}
       <CardProject 
@@ -399,6 +402,19 @@ function ProjectGallery() {
         projectUrl="https://github.com/GabAsencios/VolleyballClubDatabase"
       />
 
+
+      
+      {/* LARGE CARD */}
+      <CardProject 
+        className="md:col-span-2"
+        title="Spark– Voice First Dating App UI/UX Design"
+        description="Led UX research and design from discovery to high-fidelity mockups, following a structured design methodology. Also contributed to the React Native prototype, translating design components into a working mobile interface."
+        tech={["React Native", "TypeScript", "Tailwind CSS", "Expo", "Figma", "HTML"]}
+        projectUrl="https://github.com/GabAsencios/personalPage"
+      />
+      
+
+      
       {/* LARGE CARD */}
       <CardProject 
         className="md:col-span-2"
@@ -408,26 +424,18 @@ function ProjectGallery() {
         projectUrl="https://github.com/GabAsencios/personalPage"
       />
 
+      
+      {/* SMALL CARD (Spans 1 column) */}
+      <CardProject 
+        title="Airplane Shooting Game"
+        description="3D airplane shooter in C++ and OpenGL, featuring a custom rendering engine with Phong lighting, dynamic shadows, and texture mapping."
+        tech={["C++", "OpenGL", "Phong Lighting"]}
+        projectUrl="https://github.com/GabAsencios/Computer_Graphics_A2"
+      />
+
     </div>
   )
 }
-
-// COMPLETE
-// function CardBio() {
-//   return (
-//     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
-      
-//       {/* LARGE CARD (Spans 2 columns) */}
-//       <CardProject 
-//         className="md:col-span-2"
-//         title="QwikRide – Bike Sharing System"
-//         description="Bike sharing platform with role-based access control and JWT authentication. Optimized for fast load times with code splitting."
-//         tech={["React", "Spring Boot", "Spring Security", "Maven", "JWT"]}
-//       />
-
-//     </div>
-//   )
-// }
 
 
 function CardBio() {
@@ -441,12 +449,12 @@ function CardBio() {
           <div className="text-muted-foreground space-y-4">
             <p className="bio-text">
               Fourth year Computer Science student with hands-on experience in full-stack development, AI/ML applications,
-database design, and 3D graphics programming. Eager to contribute to a high-performing team and ship robust,
-impactful software.
+              database design, and 3D graphics programming. Eager to contribute to a high-performing team and ship robust,
+              impactful software.
             </p>
             <p className="bio-text">
               Outside of academics, I enjoy rock climbing, chess, and exploring new technologies. I'm always looking for
-opportunities to learn and take on new challenges.
+              opportunities to learn and take on new challenges.
             </p>
             
           </div>
