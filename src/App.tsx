@@ -448,7 +448,7 @@ function CardBio() {
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
             <p className="bio-text">
-              I love picking up new technologies and building things that actually matter. I'm drawn to hard problems because I believe that's when I grow the most as a developer.
+              I love picking up new technologies and building things that have real impact. I'm drawn to hard problems because I believe that's when I grow the most as a developer.
             </p>
             <p className="bio-text">
               On the technical side, I've worked across the full stack, from designing and building UIs in React to writing RESTful APIs and working with SQL & PostgreSQL databases. I've also worked with machine learning models, analyzing datasets, training and fine-tuning them for various applications.
