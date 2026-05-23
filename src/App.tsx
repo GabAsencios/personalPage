@@ -448,13 +448,13 @@ function CardBio() {
           </CardHeader>
           <div className="text-muted-foreground space-y-4">
             <p className="bio-text">
-              Fourth year Computer Science student with hands-on experience in full-stack development, AI/ML applications,
-              database design, and 3D graphics programming. Eager to contribute to a high-performing team and ship robust,
-              impactful software.
+              I love picking up new technologies and building things that actually matter. I'm drawn to hard problems because I believe that's when I grow the most as a developer.
             </p>
             <p className="bio-text">
-              Outside of academics, I enjoy rock climbing, chess, and exploring new technologies. I'm always looking for
-              opportunities to learn and take on new challenges.
+              On the technical side, I've worked across the full stack, from designing and building UIs in React to writing RESTful APIs and working with SQL & PostgreSQL databases. I've also worked with machine learning models, analyzing datasets, training and fine-tuning them for various applications.
+            </p>
+            <p className="bio-text">
+              Outside of coding, I try to stay balanced. I play sports with friends, go rock climbing, and keep up with what's going on in the world across tech, politics, and economics.
             </p>
             
           </div>
