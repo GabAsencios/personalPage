@@ -297,7 +297,7 @@ function ContactCard() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-black dark:text-white">
+            <label className="text-sm font-medium">
               Message
             </label>
             <textarea
