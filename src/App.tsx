@@ -396,7 +396,7 @@ function ProjectGallery() {
 
       {/* ANOTHER SMALL CARD */}
       <CardProject 
-        title="MVC Club Manager - Database"
+        title="MVC Club Management Database"
         description="Created a normalized SQL relational database (3NF/BCNF) for managing club operations, optimized for data integrity and query performance. Deployed a Python streamlit app for GUI."
         tech={["SQL", "Python", "Streamlit"]}
         projectUrl="https://github.com/GabAsencios/MVC-Club-Database"
