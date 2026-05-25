@@ -397,7 +397,7 @@ function ProjectGallery() {
       {/* ANOTHER SMALL CARD */}
       <CardProject 
         title="MVC Club Manager - Database"
-        description="Created a normalized MySQL relational database (3NF/BCNF) for managing club operations, optimized for data integrity and query performance. Developed a Python streamlit app for GUI."
+        description="Created a normalized SQL relational database (3NF/BCNF) for managing club operations, optimized for data integrity and query performance. Deployed a Python streamlit app for GUI."
         tech={["SQL", "Python", "Streamlit"]}
         projectUrl="https://github.com/GabAsencios/MVC-Club-Database"
       />
