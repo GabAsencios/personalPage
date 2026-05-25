@@ -388,7 +388,7 @@ function ProjectGallery() {
       <CardProject 
         title="Retrieval Augmented Time Series Forecasting"
         description="
-Reproduced RAFT, combining similarity-based retrieval with an MLP forecaster for long-term time series forecasting. Validated across 10 multivariate benchmarks and a non-stationary e-commerce dataset."
+        Reproduced RAFT, combining similarity-based retrieval with an MLP forecaster for long-term time series forecasting. Validated across 10 multivariate benchmarks and a non-stationary e-commerce dataset."
         tech={["Python", "PyTorch", "Pandas"]}
         projectUrl="https://github.com/GabAsencios/RAFT_Experiment"
       />
@@ -396,9 +396,9 @@ Reproduced RAFT, combining similarity-based retrieval with an MLP forecaster for
 
       {/* ANOTHER SMALL CARD */}
       <CardProject 
-        title="Database Volleyball Club"
+        title="MVC Club Manager - Database"
         description="Created a normalized MySQL relational database (3NF/BCNF) for managing club operations, optimized for data integrity and query performance. Developed a Python streamlit app for GUI."
-        tech={["MySQL", "Python", "Streamlit"]}
+        tech={["SQL", "Python", "Streamlit"]}
         projectUrl="https://github.com/GabAsencios/MVC-Club-Database"
       />
 
