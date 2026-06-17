@@ -7,6 +7,7 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { MagicCard } from "@/components/ui/magic-card.tsx";
+import { supabase } from "@/lib/supabase";
 
 import { Linkedin, FileText, Mail } from "lucide-react";
 import { FaJava } from "react-icons/fa";
@@ -250,66 +251,141 @@ function SkillsGrid() {
 }
 
 function ContactCard() {
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [loading, setLoading] = React.useState(false);
+  const [status, setStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = React.useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus('idle');
+    setErrorMessage('');
+
+    try {
+      const { error } = await supabase
+        .from('contacts')
+        .insert([formData]);
+
+      if (error) {
+        console.error('Supabase Error:', error);
+        throw error;
+      }
+
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      // Clear success message after 3 seconds
+      setTimeout(() => setStatus('idle'), 3000);
+    } catch (err) {
+      console.error('Full Error:', err);
+      setStatus('error');
+      setErrorMessage(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="w-full max-w-md p-4">
       <MagicCard className="flex flex-col items-center justify-center p-6 shadow-2xl rounded-xl">
         <div className="w-full space-y-4">
           <div className="text-center">
-            <h3 className="text-2xl font-bold ">
-              COMING SOON!
+            <h3 className="text-2xl font-bold">
+              Get in Touch
             </h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               Send me a message and I'll get back to you.
             </p>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium ">
-              Name
-            </label>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
-            />
-          </div>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <label className="text-sm font-medium">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+              />
+            </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">
-              Email
-            </label>
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
-            />
-          </div>
+            <div className="space-y-2">
+              <label className="text-sm font-medium">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+              />
+            </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">
-              Subject
-            </label>
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
-            />
-          </div>
+            <div className="space-y-2">
+              <label className="text-sm font-medium">
+                Subject
+              </label>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+              />
+            </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">
-              Message
-            </label>
-            <textarea
-              rows={4}
-              placeholder="Your message..."
-              className="w-full resize-none rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
-            />
-          </div>
+            <div className="space-y-2">
+              <label className="text-sm font-medium">
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows={4}
+                placeholder="Your message..."
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full resize-none rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+              />
+            </div>
 
-          <div className="flex justify-center pt-2">
-            <InteractiveHoverButton>Send Message</InteractiveHoverButton>
-          </div>
+            <div className="flex justify-center pt-2">
+              <InteractiveHoverButton type="submit" disabled={loading}>
+                {loading ? 'Sending...' : 'Send Message'}
+              </InteractiveHoverButton>
+            </div>
+
+            {status === 'success' && (
+              <p className="text-green-600 text-sm text-center">
+                ✓ Message sent successfully!
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-600 text-sm text-center">
+                ✗ Error: {errorMessage}
+              </p>
+            )}
+          </form>
         </div>
       </MagicCard>
     </div>
