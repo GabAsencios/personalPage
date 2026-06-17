@@ -303,7 +303,7 @@ function ContactCard() {
             <h3 className="text-2xl font-bold">
               Get in Touch
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-muted-foreground">
               Send me a message and I'll get back to you.
             </p>
           </div>
@@ -320,7 +320,7 @@ function ContactCard() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-foreground placeholder:text-gray-500 focus:border-black focus:outline-none dark:border-gray-700 dark:placeholder:text-gray-400 dark:focus:border-white"
               />
             </div>
 
@@ -335,7 +335,7 @@ function ContactCard() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-foreground placeholder:text-gray-500 focus:border-black focus:outline-none dark:border-gray-700 dark:placeholder:text-gray-400 dark:focus:border-white"
               />
             </div>
 
@@ -350,7 +350,7 @@ function ContactCard() {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+                className="w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-foreground placeholder:text-gray-500 focus:border-black focus:outline-none dark:border-gray-700 dark:placeholder:text-gray-400 dark:focus:border-white"
               />
             </div>
 
@@ -365,7 +365,7 @@ function ContactCard() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full resize-none rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-black placeholder:text-gray-400 focus:border-black focus:outline-none dark:border-gray-700 dark:text-white dark:focus:border-white"
+                className="w-full resize-none rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-foreground placeholder:text-gray-500 focus:border-black focus:outline-none dark:border-gray-700 dark:placeholder:text-gray-400 dark:focus:border-white"
               />
             </div>
 
@@ -435,7 +435,7 @@ function CardProject({ title, description, tech, className, projectUrl }: Projec
           </CardContent>
 
           <CardFooter className="h-16 flex items-center pt-4 border-t border-zinc-200">
-            <a href={projectUrl || "#"} target={projectUrl ? "_blank" : undefined} rel={projectUrl ? "noopener noreferrer" : undefined} className="flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-purple-700 transition-colors">
+            <a href={projectUrl || "#"} target={projectUrl ? "_blank" : undefined} rel={projectUrl ? "noopener noreferrer" : undefined} className="flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors">
               View Project
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
